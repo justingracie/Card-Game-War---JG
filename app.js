@@ -58,3 +58,9 @@
 //this should start us back at the original gameboard with a newly shuffled deck that is dealt out.
 //players names should remain the same. 
 
+
+// other Notes ----->
+
+// I think using class type objects and arrays will be my main methods used for storing player and card
+// deck information in this game.  I'll need to use loops and functions to access and manipulate this
+// data. 
