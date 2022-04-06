@@ -26,6 +26,9 @@ Start with a basic layout in HTML and CSS to construct various pages and board g
 -two player setup.
 -about page with directions.
 -play again function to reset the game with current players.
+-let tie be a tie
+-Winner has most wins after 26 rounds
+
 
 # Stretch Goals
 
@@ -33,6 +36,8 @@ Start with a basic layout in HTML and CSS to construct various pages and board g
 -dynamic background.
 -alternative play style (32 card setup), big stretch. 
 -animation of cards flipping.
+-styling
+-'War scenario'
 
 
 # Wire Frame
