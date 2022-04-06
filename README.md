@@ -37,4 +37,4 @@ Start with a basic layout in HTML and CSS to construct various pages and board g
 
 # Wire Frame
 
-![War_wireframe](images/img.jpg)
+![wireframe](./img.jpg)
