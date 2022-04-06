@@ -6,10 +6,20 @@ This will be a browser based 2 player card game.  A full deck of cards gets spli
 
 Planning Process: 
 
-
+Start with a basic layout in HTML and CSS to construct various pages and board games based on wireframes.  Then in JS I will start by creating objects that will hold the deck of cards and a function to deal the deck out randomly between two players.  Create logic to identify winners for each round, and end of Game scenario. 
 
 
 User Story:
+
+-As a user, you enter the site from a start screen. From here you can read about the game rules linked by a button, or simply start playing the game by entering  your name and clicking start.  Player two will be able to enter their name from the gameboard. 
+
+-After names are entered cards will be dealt and users will use the flip card button to flip a card from their deck, the player with the higher face value card will collect both cards and add them to their deck. 
+
+-Rounds of play will continue until one player is out of cards and a winner is determined. 
+
+-If a 'war' is initiated, players will click draw again and three face down cards will appear with a fourth card face up.  The winner takes all cards and adds them to their deck. Play continue until one player has no cards. 
+
+
 
 MVP Goals:
 
