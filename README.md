@@ -23,16 +23,18 @@ Start with a basic layout in HTML and CSS to construct various pages and board g
 
 # MVP Goals
 
--two player setup
--about page with directions
--play again function to reset the game with current players
+-two player setup.
+-about page with directions.
+-play again function to reset the game with current players.
 
 # Stretch Goals
 
--play against computer option
--dynamic background
+-play against computer option.
+-dynamic background.
 -alternative play style (32 card setup), big stretch. 
--animation of cards flipping
+-animation of cards flipping.
 
 
 # Wire Frame
+
+![War_wireframe](img.jpg)
