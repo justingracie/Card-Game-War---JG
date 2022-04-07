@@ -6,3 +6,32 @@ body{
     background-position: center;
 }
 
+.play2{
+    float: right;
+}
+
+.p1Flip{
+
+    height: 100px;
+    width: 100px;
+    background-color: aquamarine;
+    text-align: left;
+    font-size: 25px;
+    text-justify: center;
+
+}
+.p2Flip{
+
+    height: 100px;
+    width: 100px;
+    background-color: aquamarine;
+    text-align: right;
+    font-size: 25px;
+    text-justify: right;
+    float: right;
+
+}
+
+.p2Draw{
+    float: right;
+}
