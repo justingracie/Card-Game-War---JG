@@ -85,7 +85,7 @@ console.log(flipCount);
  let clicks = 0
 
  let draw1 = false;
- let draw2 = false
+ let draw2 = false;
 
 flipCount[0].addEventListener('click', clicked)
 flipCount[1].addEventListener('click', clicked2)
@@ -114,6 +114,9 @@ function roundCounter(){
 function calcWin(){
     if(clicks === 1){
         winner();
+         draw1 = false;
+         draw2 = false;
+         clicks = 0;
       
 
     }
