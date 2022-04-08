@@ -73,7 +73,7 @@ function deckRandom2 (){
 
 
 function winner(){
-   console.log('declare winner!')
+   console.log('declare winner for round!')
 }
 
 
@@ -111,19 +111,26 @@ function roundCounter(){
     }
 }
 
+let roundsPlayed = 0
+const rounds = document.querySelector('.rounds')
+console.log(rounds);
+
 function calcWin(){
     if(clicks === 1){
         winner();
          draw1 = false;
          draw2 = false;
          clicks = 0;
+         roundsPlayed++
+         console.log(`rounds played = ${roundsPlayed}`);
+         rounds.innerHTML = `rounds played = ${roundsPlayed}`;
+         
       
 
     }
 }
-      
-        
 
+        
 //    roundCounter();
 // flipCount[0].onclick = function count(){
  

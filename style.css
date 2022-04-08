@@ -31,6 +31,17 @@ body{
     float: right;
 
 }
+.rounds{
+
+    height: 50px;
+    width: 100px;
+    background-color: aquamarine;
+    text-align: right;
+    font-size: 15px;
+    text-justify: left;
+    float: center;
+
+}
 
 .p2Draw{
     float: right;
