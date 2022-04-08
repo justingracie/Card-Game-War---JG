@@ -1,12 +1,56 @@
 // GLOBAL VARIABLES ----->
-deck = [1,2,3,4,5,6,7,8,9,10,11,12,13]
+
+let suit = ['Hearts', 'Clubs', 'Diamonds', 'Spades'];
+let rank = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'Jack', 'Queen', 'King', 'Ace'];
+let score = {
+    2: 2,
+    3: 3,
+    4: 4,
+    5: 5,
+    6: 6,
+    7: 7,
+    8: 8,
+    9: 9,
+    10: 10,
+    Jack: 11,
+    Queen: 12,
+    King: 13,
+    Ace: 14,
+
+}
+
+deck = []
 
 const p1Flip = document.querySelector('.p1Flip')
 const p2Flip = document.querySelector('.p2Flip')
 const p1Draw = document.querySelector('.p1Draw')
 const p2Draw = document.querySelector('.p2Draw')
 let card;
+// let cards;
+let player1Card;
+let player2Card;
+let clicks = 0
 
+let draw1 = false;
+let draw2 = false;
+
+
+// Build Decks ----->
+
+
+
+for (let i = 0; i < suit.length; i++){
+    // console.log(suit[i]) 
+    for(let j = 0; j < rank.length; j++){
+        let cards = {
+            suit: suit[i],
+            rank: rank[j],
+            score: score[rank[j]]
+        }
+        deck.push(cards)
+    }
+}
+console.log(deck);
 
 // GAME RULES ------>
 
@@ -39,7 +83,6 @@ let card;
 
 p2Draw.addEventListener('click', deckRandom2)
 p1Draw.addEventListener('click', deckRandom)
-let player1Card;
 
 function deckRandom (){
     for(let i = 0; i < deck.length; i++){
@@ -53,7 +96,6 @@ function deckRandom (){
     }
     
 }
-let player2Card;
 
 function deckRandom2 (){
     for(let i = 0; i < deck.length; i++){
@@ -72,20 +114,17 @@ function deckRandom2 (){
 
 
 
-function winner(){
+function roundWinner(){
+
    console.log('declare winner for round!')
 }
 
 
 // add round counter functions ---->
 
- const flipCount = document.querySelectorAll('#flip')
+const flipCount = document.querySelectorAll('#flip')
 console.log(flipCount);
 
- let clicks = 0
-
- let draw1 = false;
- let draw2 = false;
 
 flipCount[0].addEventListener('click', clicked)
 flipCount[1].addEventListener('click', clicked2)
@@ -117,7 +156,7 @@ console.log(rounds);
 
 function calcWin(){
     if(clicks === 1){
-        winner();
+        roundWinner();
          draw1 = false;
          draw2 = false;
          clicks = 0;
