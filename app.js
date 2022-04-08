@@ -1,5 +1,5 @@
 // GLOBAL VARIABLES ----->
-deck = ['2H', '3H', '4H', '5H', '6H', '7H', '8H', '9H', '10H', 'JH', 'QH', 'KH', 'AH', '2C', '3C', '4C', '5C', '6C', '7C', '8C', '9C', '10C', 'JC', 'QC', 'KC', 'AC', '2S', '3S', '4S', '5S', '6S', '7S', '8S', '9S', '10S', 'JS', 'QS', 'KS', 'AS', '2D', '3D', '4D', '5D', '6D', '7D', '8D', '9D', '10D', 'JD', 'QD', 'KD', 'AD']
+deck = [1,2,3,4,5,6,7,8,9,10,11,12,13]
 
 const p1Flip = document.querySelector('.p1Flip')
 const p2Flip = document.querySelector('.p2Flip')
@@ -39,29 +39,101 @@ let card;
 
 p2Draw.addEventListener('click', deckRandom2)
 p1Draw.addEventListener('click', deckRandom)
-
+let player1Card;
 
 function deckRandom (){
     for(let i = 0; i < deck.length; i++){
-       let card = deck[Math.floor(Math.random() * deck.length)];
-        console.log(card);
-        p1Flip.innerHTML = card;
+       let player1Card = deck[Math.floor(Math.random() * deck.length)];
+        // console.log(card[i]);
+        p1Flip.innerHTML = player1Card;
+       
+        // winner();
+
 
     }
     
 }
-
+let player2Card;
 
 function deckRandom2 (){
     for(let i = 0; i < deck.length; i++){
-       let card = deck[Math.floor(Math.random() * deck.length)];
-        console.log(card);
-        p2Flip.innerHTML = card;
+       let player2Card = deck[Math.floor(Math.random() * deck.length)];
+       p2Flip.innerHTML = player2Card;
+    //    let player2Card = card[i];
+    //    winner();
 
+    //    console.log(card);
+       
     }
     
 }
 
+// Declare Winner ----->
+
+
+
+// function winner(){
+//     if(player1Card > player2Card){
+//         console.log('player 1 wins')
+//     }else if(player2Card > player1Card){
+//         console.log('player 2 wins')
+//     }else{
+//         console.log('it is a tie!')
+//     }
+// }
+
+
+// add round counter function:
+ const flipCount = document.querySelectorAll('#flip')
+console.log(flipCount);
+
+ let clicks = 0
+
+ let draw1 = false;
+ let draw2 = false
+
+flipCount[0].addEventListener('click', clicked)
+flipCount[1].addEventListener('click', clicked2)
+
+function clicked(){
+    draw1 = true;
+    // draw2 = true;
+    console.log(`draw1 = ${draw1}`);
+    roundCounter();
+}
+
+function clicked2(){
+    draw2 = true;
+    console.log(`draw2 = ${draw2}`);
+    roundCounter();
+}
+
+function roundCounter(){
+    if (draw1 == true && draw2 == true){
+        
+        clicks +=1;
+        console.log(clicks);
+      
+        
+   }
+   
+
+   }
+
+//    roundCounter();
+// flipCount[0].onclick = function count(){
+ 
+//         clicks +=1;
+//         console.log(clicks);
+
+// }
+
+// flipCount[1].onclick = function count2(){
+//     clicks += 1;
+//     console.log(clicks)
+// }
+
+    
 
 
 class Players {
