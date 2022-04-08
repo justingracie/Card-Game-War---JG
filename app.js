@@ -47,7 +47,7 @@ function deckRandom (){
         // console.log(card[i]);
         p1Flip.innerHTML = player1Card;
        
-        // winner();
+        
 
 
     }
@@ -60,7 +60,7 @@ function deckRandom2 (){
        let player2Card = deck[Math.floor(Math.random() * deck.length)];
        p2Flip.innerHTML = player2Card;
     //    let player2Card = card[i];
-    //    winner();
+       
 
     //    console.log(card);
        
@@ -72,18 +72,13 @@ function deckRandom2 (){
 
 
 
-// function winner(){
-//     if(player1Card > player2Card){
-//         console.log('player 1 wins')
-//     }else if(player2Card > player1Card){
-//         console.log('player 2 wins')
-//     }else{
-//         console.log('it is a tie!')
-//     }
-// }
+function winner(){
+   console.log('declare winner!')
+}
 
 
-// add round counter function:
+// add round counter functions ---->
+
  const flipCount = document.querySelectorAll('#flip')
 console.log(flipCount);
 
@@ -110,15 +105,21 @@ function clicked2(){
 
 function roundCounter(){
     if (draw1 == true && draw2 == true){
-        
         clicks +=1;
         console.log(clicks);
+        calcWin();
+    }
+}
+
+function calcWin(){
+    if(clicks === 1){
+        winner();
+      
+
+    }
+}
       
         
-   }
-   
-
-   }
 
 //    roundCounter();
 // flipCount[0].onclick = function count(){
