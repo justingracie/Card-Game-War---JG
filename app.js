@@ -84,17 +84,18 @@ console.log(deck);
 p2Draw.addEventListener('click', deckRandom2)
 p1Draw.addEventListener('click', deckRandom)
 
+let play1Deck = [];
+
 function deckRandom (){
-    for(let i = 0; i < deck.length; i++){
-       let player1Card = deck[Math.floor(Math.random() * deck.length)];
-        // console.log(card[i]);
-        p1Flip.innerHTML = player1Card;
-       
-        
-
-
-    }
+    for(let i = 0; i < 26; i++){
+       let player1Card = deck.splice(Math.floor(Math.random()* deck.length), 1)[0];
+       play1Deck.push(player1Card)
+            
+    //    console.log(player1Card)
     
+}
+console.log(play1Deck);
+p1Flip.innerHTML = `${play1Deck[0].rank} ${play1Deck[0].suit}`
 }
 
 function deckRandom2 (){
