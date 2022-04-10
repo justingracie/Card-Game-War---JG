@@ -36,6 +36,25 @@ let draw1 = false;
 let draw2 = false;
 
 const shuffle = document.querySelector('.shuffle')
+const winner = document.querySelector('.winner')
+const replay = document.querySelector('.replay')
+
+let play1Deck = [];
+let play2Deck = [];
+
+let drawPile = [];
+let roundDraw1;
+let roundDraw2;
+let roundWin;
+
+const p1Cards = document.querySelector('.p1Cards');
+
+const p2Cards = document.querySelector('.p2Cards');
+
+const flipCount = document.querySelectorAll('#flip')
+
+let roundsPlayed = 0
+const rounds = document.querySelector('.rounds')
 
 // Build Decks ----->
 
@@ -79,14 +98,6 @@ console.log(deck);
 //Shuffle and dealing the deck ----->
 
 
-// console.log(shuffle)
-
-
-
-// console.log(p1Result);
-
-
-
 shuffle.addEventListener('click', shuffleDeck);
 
 function shuffleDeck (){
@@ -97,7 +108,6 @@ function shuffleDeck (){
         play1Deck.push(player1Card)
         play2Deck.push(player2Card)
         
-        //    console.log(player1Card)
         
     }
     console.log(play1Deck);
@@ -107,11 +117,9 @@ function shuffleDeck (){
 
 // Drawing Cards ----->
 
-let play1Deck = [];
-let play2Deck = [];
+p2Draw.addEventListener('click', p2DrawCard)
+p1Draw.addEventListener('click', p1DrawCard)
 
-        p2Draw.addEventListener('click', p2DrawCard)
-        p1Draw.addEventListener('click', p1DrawCard)
 function p1DrawCard(){
 
     p1Flip.innerHTML = `${play1Deck[0].rank} ${play1Deck[0].suit}`
@@ -125,16 +133,9 @@ function p2DrawCard(){
 }
 
 
-        // p2Flip.innerHTML = `${play2Deck[0].rank} ${play2Deck[0].suit}`
-
         
-
-        // Declare Round Winner ----->
+// Declare Round Winner ----->
         
-let drawPile = [];
-let roundDraw1;
-let roundDraw2;
-let roundWin;
 
         
 function roundWinner(){
@@ -151,10 +152,7 @@ function roundWinner(){
         play1Deck.push(roundWin[0]);
         play1Deck.push(roundWin[1]);
         
-        console.log('player 1 wins round!');
-        console.log(drawPile);
-        console.log(play1Deck)
-        console.log(play2Deck)
+        
     }else if(play2Deck[0].score > play1Deck[0].score){
         
         let roundDraw1 = play1Deck.splice(0,1)
@@ -169,13 +167,8 @@ function roundWinner(){
         play2Deck.push(roundWin[1]);
         
         
-        console.log('player 2 wins the round!')
-        console.log(drawPile);
-        console.log(play1Deck)
-        console.log(play2Deck)
-        
     }else{
-        console.log('This round is a tie')
+
         let roundDraw1 = play1Deck.splice(0,1);
         let roundDraw2 = play2Deck.splice(0,1);
 
@@ -186,8 +179,7 @@ function roundWinner(){
         
         play1Deck.push(roundWin[0]);
         play2Deck.push(roundWin[1]);
-        console.log(play1Deck)
-        console.log(play2Deck)
+        
     }
     p1CardCount();
     p2CardCount();
@@ -198,11 +190,7 @@ function roundWinner(){
 
 // Keeping count of Cards ------>
 
-const p1Cards = document.querySelector('.p1Cards');
-console.log(p1Cards);
 
-const p2Cards = document.querySelector('.p2Cards');
-console.log(p2Cards);
 
 function p1CardCount(){
     p1Cards.innerHTML = `Player 1 Cards: ${play1Deck.length}`;
@@ -214,8 +202,7 @@ function p2CardCount(){
 
 // add round counter functions ---->
 
-const flipCount = document.querySelectorAll('#flip')
-console.log(flipCount);
+
 
 
 flipCount[0].addEventListener('click', clicked)
@@ -242,9 +229,7 @@ function roundCounter(){
     }
 }
 
-let roundsPlayed = 0
-const rounds = document.querySelector('.rounds')
-console.log(rounds);
+
 
 function calcWin(){
     if(clicks === 1){
@@ -265,8 +250,6 @@ function calcWin(){
 
 // Game Winner Function ----->
 
-const winner = document.querySelector('.winner')
-const replay = document.querySelector('.replay')
 
 
 function declareWinner(){
@@ -280,17 +263,23 @@ function gameResults(){
         winner.innerHTML = 'PLAYER 1 WINS!!!';
         winner.classList.remove('hide');
         replay.classList.remove('hide');
-        console.log('Player 1 WINS!!!')
+        p1Draw.classList.add('hide');
+        p2Draw.classList.add('hide');
+
         
     }else if(play2Deck.length > play1Deck.length){
         winner.innerHTML = 'Player 2 WINS!!!';
         winner.classList.remove('hide');
         replay.classList.remove('hide');
-        console.log('Player 2 WINS!!!')
+        p1Draw.classList.add('hide');
+        p2Draw.classList.add('hide');
+
     }else{
-        console.log('Its a tie!!')
+
         winner.classList.remove('hide');
         replay.classList.remove('hide');
+        p1Draw.classList.add('hide');
+        p2Draw.classList.add('hide');
         winner.innerHTML = "It's a TIE!!!";
     }
 
