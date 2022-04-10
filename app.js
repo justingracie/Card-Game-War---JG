@@ -176,6 +176,18 @@ function roundWinner(){
         
     }else{
         console.log('This round is a tie')
+        let roundDraw1 = play1Deck.splice(0,1);
+        let roundDraw2 = play2Deck.splice(0,1);
+
+        drawPile.push(roundDraw1);
+        drawPile.push(roundDraw2);
+        
+        let roundWin = drawPile.splice(0,2);
+        
+        play1Deck.push(roundWin[0]);
+        play2Deck.push(roundWin[1]);
+        console.log(play1Deck)
+        console.log(play2Deck)
     }
 
 
