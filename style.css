@@ -70,3 +70,14 @@ body{
     float: center;
 
 }
+
+.winner{
+    background-color: aquamarine;
+    height: 350px;
+    width: 350px;
+
+}
+
+.hide{
+    opacity: 0;
+}

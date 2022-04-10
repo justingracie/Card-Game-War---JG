@@ -265,6 +265,10 @@ function calcWin(){
 
 // Game Winner Function ----->
 
+const winner = document.querySelector('.winner')
+const replay = document.querySelector('.replay')
+
+
 function declareWinner(){
     if(roundsPlayed === 5){
         gameResults();
@@ -273,12 +277,21 @@ function declareWinner(){
 
 function gameResults(){
     if(play1Deck.length > play2Deck.length){
+        winner.innerHTML = 'PLAYER 1 WINS!!!';
+        winner.classList.remove('hide');
+        replay.classList.remove('hide');
         console.log('Player 1 WINS!!!')
-
+        
     }else if(play2Deck.length > play1Deck.length){
+        winner.innerHTML = 'Player 2 WINS!!!';
+        winner.classList.remove('hide');
+        replay.classList.remove('hide');
         console.log('Player 2 WINS!!!')
     }else{
         console.log('Its a tie!!')
+        winner.classList.remove('hide');
+        replay.classList.remove('hide');
+        winner.innerHTML = "It's a TIE!!!";
     }
 
 }
