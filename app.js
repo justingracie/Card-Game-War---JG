@@ -131,13 +131,49 @@ function p2DrawCard(){
 
         // Declare Winner ----->
         
-        
+let drawPile = [];
+let roundDraw1;
+let roundDraw2;
+let roundWin;
+
         
 function roundWinner(){
     if(play1Deck[0].score > play2Deck[0].score){
+
+        let roundDraw1 = play1Deck.splice(0,1);
+        let roundDraw2 = play2Deck.splice(0,1);
+
+        drawPile.push(roundDraw1);
+        drawPile.push(roundDraw2);
+        
+        let roundWin = drawPile.splice(0,2);
+        
+        play1Deck.push(roundWin[0]);
+        play1Deck.push(roundWin[1]);
+        
         console.log('player 1 wins round!');
+        console.log(drawPile);
+        console.log(play1Deck)
+        console.log(play2Deck)
     }else if(play2Deck[0].score > play1Deck[0].score){
+        
+        let roundDraw1 = play1Deck.splice(0,1)
+        let roundDraw2 = play2Deck.splice(0,1)
+        
+        drawPile.push(roundDraw1);
+        drawPile.push(roundDraw2);
+        
+        let roundWin = drawPile.splice(0,2);
+        
+        play2Deck.push(roundWin[0]);
+        play2Deck.push(roundWin[1]);
+        
+        
         console.log('player 2 wins the round!')
+        console.log(drawPile);
+        console.log(play1Deck)
+        console.log(play2Deck)
+        
     }else{
         console.log('This round is a tie')
     }
