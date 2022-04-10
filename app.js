@@ -296,6 +296,14 @@ function gameResults(){
 
 }
 
+// Play Again ----->
+
+replay.addEventListener('click', playAgain)
+
+function playAgain(){
+    location.reload();
+}
+
 
 
 // class Players {
