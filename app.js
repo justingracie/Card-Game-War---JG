@@ -129,7 +129,7 @@ function p2DrawCard(){
 
         
 
-        // Declare Winner ----->
+        // Declare Round Winner ----->
         
 let drawPile = [];
 let roundDraw1;
@@ -189,10 +189,28 @@ function roundWinner(){
         console.log(play1Deck)
         console.log(play2Deck)
     }
+    p1CardCount();
+    p2CardCount();
 
 
 }
 
+
+//Keeping count of Cards ------>
+
+const p1Cards = document.querySelector('.p1Cards');
+console.log(p1Cards);
+
+const p2Cards = document.querySelector('.p2Cards');
+console.log(p2Cards);
+
+function p1CardCount(){
+    p1Cards.innerHTML = `Player 1 Cards: ${play1Deck.length}`;
+}
+
+function p2CardCount(){
+    p2Cards.innerHTML = `Player 2 Cards: ${play2Deck.length}`
+}
 
 // add round counter functions ---->
 
