@@ -196,7 +196,7 @@ function roundWinner(){
 }
 
 
-//Keeping count of Cards ------>
+// Keeping count of Cards ------>
 
 const p1Cards = document.querySelector('.p1Cards');
 console.log(p1Cards);
@@ -255,46 +255,53 @@ function calcWin(){
          roundsPlayed++
          console.log(`rounds played = ${roundsPlayed}`);
          rounds.innerHTML = `rounds played = ${roundsPlayed}`;
+         declareWinner();
          
       
 
     }
 }
 
-        
-//    roundCounter();
-// flipCount[0].onclick = function count(){
- 
-//         clicks +=1;
-//         console.log(clicks);
 
-// }
+// Game Winner Function ----->
 
-// flipCount[1].onclick = function count2(){
-//     clicks += 1;
-//     console.log(clicks)
-// }
-
-    
-
-
-class Players {
-    constructor(name, cards=[], wins=0){
-        this.name = name
-        this.cards = cards
-        this.wins = wins
-
-    }
-    getName(){
-        return this.name;
-    }
-    getCards(){
-        return this.cards;
-    }
-    getWins(){
-        return this.wins;
+function declareWinner(){
+    if(roundsPlayed === 5){
+        gameResults();
     }
 }
+
+function gameResults(){
+    if(play1Deck.length > play2Deck.length){
+        console.log('Player 1 WINS!!!')
+
+    }else if(play2Deck.length > play1Deck.length){
+        console.log('Player 2 WINS!!!')
+    }else{
+        console.log('Its a tie!!')
+    }
+
+}
+
+
+
+// class Players {
+//     constructor(name, cards=[], wins=0){
+//         this.name = name
+//         this.cards = cards
+//         this.wins = wins
+
+//     }
+//     getName(){
+//         return this.name;
+//     }
+//     getCards(){
+//         return this.cards;
+//     }
+//     getWins(){
+//         return this.wins;
+//     }
+// }
 
 
 
