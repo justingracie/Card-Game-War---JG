@@ -105,8 +105,9 @@ function shuffleDeck (){
         let player1Card = deck.splice(Math.floor(Math.random()* deck.length), 1)[0];
         let player2Card = deck.splice(Math.floor(Math.random()* deck.length), 1)[0];
         
-        play1Deck.push(player1Card)
-        play2Deck.push(player2Card)
+        play1Deck.push(player1Card);
+        play2Deck.push(player2Card);
+        shuffle.classList.add('hide');
         
         
     }
