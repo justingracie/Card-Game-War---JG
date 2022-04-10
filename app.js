@@ -35,6 +35,7 @@ let clicks = 0
 let draw1 = false;
 let draw2 = false;
 
+const shuffle = document.querySelector('.shuffle')
 
 // Build Decks ----->
 
@@ -77,7 +78,6 @@ console.log(deck);
 
 //Shuffle and dealing the deck ----->
 
-const shuffle = document.querySelector('.shuffle')
 
 // console.log(shuffle)
 
@@ -85,51 +85,55 @@ const shuffle = document.querySelector('.shuffle')
 
 // console.log(p1Result);
 
-// p2Draw.addEventListener('click', deckRandom2)
-// p1Draw.addEventListener('click', deckRandom)
 
-let play1Deck = [];
-let play2Deck = [];
 
 shuffle.addEventListener('click', shuffleDeck);
 
 function shuffleDeck (){
     for(let i = 0; i < 26; i++){
-       let player1Card = deck.splice(Math.floor(Math.random()* deck.length), 1)[0];
-       let player2Card = deck.splice(Math.floor(Math.random()* deck.length), 1)[0];
-       
-       play1Deck.push(player1Card)
-       play2Deck.push(player2Card)
-
-    //    console.log(player1Card)
+        let player1Card = deck.splice(Math.floor(Math.random()* deck.length), 1)[0];
+        let player2Card = deck.splice(Math.floor(Math.random()* deck.length), 1)[0];
+        
+        play1Deck.push(player1Card)
+        play2Deck.push(player2Card)
+        
+        //    console.log(player1Card)
+        
+    }
+    console.log(play1Deck);
+    console.log(play2Deck);
     
 }
-console.log(play1Deck);
-console.log(play2Deck);
 
-// p1Flip.innerHTML = `${play1Deck[0].rank} ${play1Deck[0].suit}`
-// p2Flip.innerHTML = `${play2Deck[0].rank} ${play2Deck[0].suit}`
+// Drawing Cards ----->
+
+let play1Deck = [];
+let play2Deck = [];
+
+        p2Draw.addEventListener('click', p2DrawCard)
+        p1Draw.addEventListener('click', p1DrawCard)
+function p1DrawCard(){
+
+    p1Flip.innerHTML = `${play1Deck[0].rank} ${play1Deck[0].suit}`
+
+}
+
+function p2DrawCard(){
+
+    p2Flip.innerHTML = `${play2Deck[0].rank} ${play2Deck[0].suit}`
+
 }
 
 
-// function deckRandom2 (){
-//     for(let i = 0; i < deck.length; i++){
-//        let player2Card = deck[Math.floor(Math.random() * deck.length)];
-//        p2Flip.innerHTML = player2Card;
-    //    let player2Card = card[i];
-       
+        // p2Flip.innerHTML = `${play2Deck[0].rank} ${play2Deck[0].suit}`
 
-    //    console.log(card);
-       
-//     }
-    
-// }
+        
 
-// Declare Winner ----->
-
-
-
-function roundWinner(){
+        // Declare Winner ----->
+        
+        
+        
+        function roundWinner(){
 
    console.log('declare winner for round!')
 }
