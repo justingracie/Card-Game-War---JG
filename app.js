@@ -133,9 +133,16 @@ function p2DrawCard(){
         
         
         
-        function roundWinner(){
+function roundWinner(){
+    if(play1Deck[0].score > play2Deck[0].score){
+        console.log('player 1 wins round!');
+    }else if(play2Deck[0].score > play1Deck[0].score){
+        console.log('player 2 wins the round!')
+    }else{
+        console.log('This round is a tie')
+    }
 
-   console.log('declare winner for round!')
+
 }
 
 
