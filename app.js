@@ -145,8 +145,8 @@ function roundWinner(){
         let roundDraw1 = play1Deck.splice(0,1);
         let roundDraw2 = play2Deck.splice(0,1);
 
-        drawPile.push(roundDraw1);
-        drawPile.push(roundDraw2);
+        drawPile.push(roundDraw1[0]);
+        drawPile.push(roundDraw2[0]);
         
         let roundWin = drawPile.splice(0,2);
         
@@ -154,18 +154,32 @@ function roundWinner(){
         play1Deck.push(roundWin[1]);
         
         
+        console.log(roundDraw1[0])
+        console.log(roundDraw2[0])
+
+
+
+        console.log(play1Deck);
+        console.log(play2Deck);
+        
     }else if(play2Deck[0].score > play1Deck[0].score){
         
         let roundDraw1 = play1Deck.splice(0,1)
         let roundDraw2 = play2Deck.splice(0,1)
         
-        drawPile.push(roundDraw1);
-        drawPile.push(roundDraw2);
+        drawPile.push(roundDraw1[0]);
+        drawPile.push(roundDraw2[0]);
         
         let roundWin = drawPile.splice(0,2);
         
         play2Deck.push(roundWin[0]);
         play2Deck.push(roundWin[1]);
+
+        console.log(roundDraw1[0])
+        console.log(roundDraw2[0])
+        // play2Deck.flat(2);
+        console.log(play1Deck);
+        console.log(play2Deck);
         
         
     }else{
@@ -173,14 +187,20 @@ function roundWinner(){
         let roundDraw1 = play1Deck.splice(0,1);
         let roundDraw2 = play2Deck.splice(0,1);
 
-        drawPile.push(roundDraw1);
-        drawPile.push(roundDraw2);
+        drawPile.push(roundDraw1[0]);
+        drawPile.push(roundDraw2[0]);
         
         let roundWin = drawPile.splice(0,2);
         
         play1Deck.push(roundWin[0]);
+        // play1Deck.flat(2);
         play2Deck.push(roundWin[1]);
-        
+        // play2Deck.flat(2);
+        // console.log(roundDraw1[0])
+        // console.log(roundDraw2[0])
+
+        // console.log(play1Deck);
+        // console.log(playDeck);
     }
     p1CardCount();
     p2CardCount();
@@ -254,7 +274,7 @@ function calcWin(){
 
 
 function declareWinner(){
-    if(roundsPlayed === 5){
+    if(roundsPlayed === 26){
         gameResults();
     }
 }

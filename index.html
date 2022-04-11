@@ -11,41 +11,64 @@
 <body>
     
 <nav class="navBar">
-    <a href="index.html">Home Page</a>
+    <a href="index.html">Game Room</a>
     <a href="instructions.html">Game Rules</a>
 </nav>
+<div class="video-wrapper">
 
+    <!-- <video id="video" autoplay loop muted poster>
+        <source src="https://dm0qx8t0i9gc9.cloudfront.net/watermarks/video/2mhLcvO/videoblocks-floating-broadcast-shapes_r4gi-ot-z7__c0bbbd54218447d4eaf208876360cbb2__P360.mp4" type="video/webm">
+        y
+    </video> -->
+
+
+</div>
 <div class="container">
 
     
-    <div class="play1Butt">
+    <div class="buttonContainer">
+        <div class="play1Butt">
         
-        <button class="p1Draw" id="flip"> Player 1 FLIP</button>
-    </div>
-    <div class="p1Flip"></div>
-    
-  
-    <div class="play2Butt">
+            <button class="p1Draw" id="flip"> Player 1 FLIP</button>
+            
+            <div class="p1Flip"></div>
+        </div>
         
-        <button class="p2Draw" id="flip">Player 2 FLIP</button>
+      
+        <div class="play2Butt">
+            
+            <button class="p2Draw" id="flip">Player 2 FLIP</button>
+            <br/>
+            <div class="p2Flip"></div>
+        </div>
     </div>
     
-    <div class="p2Flip"></div>
-    
+
     <div class="rounds"></div>
+
     <div class="moreButton">
         
         <button class="shuffle">SHUFFLE & DEAL</button>
         
     </div>
     
+   <div class="cardContainer">
     <div class="p1Cards">Player 1 Cards:</div>
     <div class="p2Cards">Player 2 Cards:</div>
-    <div class="winner hide">
+   </div>
+   
+   <div class="winContainer">
+
+       <div class="winner hide">
+           
     </div>
     <button class="replay hide">PLAY AGAIN</button>
     
+   </div>
+    
     
 </div>
+
+
     </body>
 </html>

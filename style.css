@@ -1,45 +1,80 @@
 body{
     background-color: seagreen;
-    /* background-image: url(https://images.pexels.com/photos/5217753/pexels-photo-5217753.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1); */
+    /* background-image: url(https://dm0qx8t0i9gc9.cloudfront.net/watermarks/video/2mhLcvO/videoblocks-floating-broadcast-shapes_r4gi-ot-z7__c0bbbd54218447d4eaf208876360cbb2__P360.mp4); */
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
 }
+/* video{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
 
+    position: absolute;
+    top:0;
+    left:0;
+} */
+
+/* #video{
+    height: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+} */
+
+
+/*  citation : https://blog.hubspot.com/website/video-background-css */
 .play2{
     float: right;
 }
 
 .p1Flip{
 
-    height: 100px;
-    width: 100px;
+    height: 150px;
+    width: 94px;
     background-color: aquamarine;
-    text-align: left;
+    text-align: center;
     font-size: 25px;
     text-justify: center;
+    border: solid 2px black;
+    border-radius: 8px;
+    padding-top: 30px;
 
 }
 .p2Flip{
 
-    height: 100px;
-    width: 100px;
+    height: 150px;
+    width: 95px;
     background-color: aquamarine;
-    text-align: right;
+    text-align: center;
     font-size: 25px;
-    text-justify: right;
+    text-justify: center;
     float: left;
+    border: solid 2px black;
+    border-radius: 8px;
+    padding-top: 30px;
 
 }
 .rounds{
 
-    height: 50px;
-    width: 100px;
+    height: 80px;
+    width: 325px;
     background-color: aquamarine;
-    text-align: right;
-    font-size: 15px;
+    text-align: center;
+    font-size: 40px;
     text-justify: left;
-    float: center;
+    /* float: center; */
+    flex-grow: 4;
+    border: solid 2px black;
+    margin: 0 auto;
+    padding-top: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
 
 }
 
@@ -49,48 +84,64 @@ body{
 
 .p1Cards{
 
-    height: 100px;
-    width: 100px;
+    height: 50px;
+    width: 250px;
     background-color: aquamarine;
-    text-align: center;
+    text-align: left;
     font-size: 25px;
-    text-justify: right;
+    text-justify: center;
+    border: solid 2px black;
+    border-radius: 8px;
+    padding-top: 12px;
 
 
 }
 
 .p2Cards{
 
-    height: 100px;
-    width: 100px;
+    height: 50px;
+    width: 250px;
     background-color: aquamarine;
-    text-align: center;
-    font-size: 25px;
-    text-justify: right;
 
+    text-align: left;
+    font-size: 25px;
+    text-justify: center;
+    border: solid 2ps black;
+    border-radius: 8px;
+    padding-top: 12px;
 
 }
 
 .winner{
     background-color: aquamarine;
-    height: 350px;
+    height: 80px;
     width: 350px;
+    border: solid 2px black;
+    border-radius: 8px;
+    text-align: center;
+
+    font-size: 35px;
+    
 
 }
 
 .hide{
     opacity: 0;
 }
-
+/* 
 .container{
    display: flex;
-   flex-direction: column;
+   flex-direction: row;
+   flex-wrap: wrap;
+   justify-content: space-around;
+   gap: 30px;
 
 
-}
+} */
 
 .navBar{
     background-color: aquamarine;
+
     border: solid 2px black;
     border-radius: 12px;
     height: 35px;
@@ -99,6 +150,47 @@ body{
     flex-direction: row;
     justify-content: space-around;
     padding-top: 10px;
+    align-content: center;
+    text-decoration: none;
 
 
+}
+
+.play1Butt{
+    align-items: center;
+}
+.play2Butt{
+    align-items: center;
+}
+
+.buttonContainer{
+    display: flex;
+    /* border: solid 2px black; */
+    justify-content: space-between;
+    height: 200px;
+    align-content: stretch;
+    margin-top: 25px;
+}
+
+.moreButton{
+    text-align: center;
+    margin-top: 10px;
+
+}
+.cardContainer{
+    display: flex;
+    /* border: solid 2px black; */
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.winContainer{
+    display: flex;
+    justify-content: center;
+    /* border: solid 2px black; */
+    margin-top: 20px;
+}
+
+.nav{
+    
 }
