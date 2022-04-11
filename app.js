@@ -362,3 +362,8 @@ function playAgain(){
 // I think using class type objects and arrays will be my main methods used for storing player and card
 // deck information in this game.  I'll need to use loops and functions to access and manipulate this
 // data. 
+
+
+//REFERENCES: 
+
+//https://www.w3schools.com/jsref/met_loc_reload.asp
