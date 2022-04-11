@@ -1,7 +1,7 @@
 // GLOBAL VARIABLES ----->
 
-let suit = ['Hearts', 'Clubs', 'Diamonds', 'Spades'];
-let rank = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'Jack', 'Queen', 'King', 'Ace'];
+let suit = ['H', 'C', 'D', 'S'];
+let rank = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A'];
 let score = {
     2: 2,
     3: 3,
@@ -12,10 +12,10 @@ let score = {
     8: 8,
     9: 9,
     10: 10,
-    Jack: 11,
-    Queen: 12,
-    King: 13,
-    Ace: 14,
+    J: 11,
+    Q: 12,
+    K: 13,
+    A: 14,
 
 }
 
@@ -116,7 +116,7 @@ function shuffleDeck (){
     
 }
 
-// Drawing Cards ----->
+// FLipping Cards ----->
 
 p2Draw.addEventListener('click', p2DrawCard)
 p1Draw.addEventListener('click', p1DrawCard)

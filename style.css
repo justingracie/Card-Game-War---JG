@@ -1,6 +1,6 @@
 body{
     background-color: seagreen;
-    background-image: url(https://images.pexels.com/photos/5217753/pexels-photo-5217753.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    /* background-image: url(https://images.pexels.com/photos/5217753/pexels-photo-5217753.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1); */
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
@@ -28,7 +28,7 @@ body{
     text-align: right;
     font-size: 25px;
     text-justify: right;
-    float: right;
+    float: left;
 
 }
 .rounds{
@@ -52,10 +52,10 @@ body{
     height: 100px;
     width: 100px;
     background-color: aquamarine;
-    text-align: right;
+    text-align: center;
     font-size: 25px;
     text-justify: right;
-    float: center;
+
 
 }
 
@@ -64,10 +64,10 @@ body{
     height: 100px;
     width: 100px;
     background-color: aquamarine;
-    text-align: right;
+    text-align: center;
     font-size: 25px;
     text-justify: right;
-    float: center;
+
 
 }
 
@@ -80,4 +80,25 @@ body{
 
 .hide{
     opacity: 0;
+}
+
+.container{
+   display: flex;
+   flex-direction: column;
+
+
+}
+
+.navBar{
+    background-color: aquamarine;
+    border: solid 2px black;
+    border-radius: 12px;
+    height: 35px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 10px;
+
+
 }
