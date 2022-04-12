@@ -28,3 +28,4 @@ See the 'Game Rules' page for instructions on how the game works.
 
 # Next Steps
 
+In a future version of this game I'd like to add additional battle scenarios.  When players draw a card of the same score during a battle, I'd like to start a new battle where each player draws 4 addtional cards that compares the scores of the 4th card.  The player with the higher cards adds all 8 to their arsenal. Additionally after 26 battles, If the players arsenals are the same size I would like to initiate a sudden death round highest cards wins the game. I would also like to add some animation to the game in future versions, maybe the battle scene in the game room isn't a static image, but one with movement (even if just a short animated loop).
