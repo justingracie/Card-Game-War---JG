@@ -97,6 +97,10 @@ console.log(deck);
 
 //Shuffle and dealing the deck ----->
 
+const cardImage1 = document.querySelector('.card1');
+const cardImage2 = document.querySelector('.card2');
+
+
 
 shuffle.addEventListener('click', shuffleDeck);
 
@@ -108,6 +112,9 @@ function shuffleDeck (){
         play1Deck.push(player1Card);
         play2Deck.push(player2Card);
         shuffle.classList.add('hide');
+        cardImage1.classList.remove('hide');
+        cardImage2.classList.remove('hide');    
+
         
         
     }
