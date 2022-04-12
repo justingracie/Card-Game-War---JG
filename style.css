@@ -92,7 +92,7 @@ h1{
 .p1Cards{
 
     height: 50px;
-    width: 250px;
+    width: 300px;
     background-color: rgba(103, 223, 183, 0.75);
     text-align: left;
     font-size: 25px;
@@ -107,7 +107,7 @@ h1{
 .p2Cards{
 
     height: 50px;
-    width: 250px;
+    width: 300px;
     background-color: rgba(103, 223, 183, 0.75);
 
     text-align: left;

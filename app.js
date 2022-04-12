@@ -73,24 +73,6 @@ for (let i = 0; i < suit.length; i++){
 }
 console.log(deck);
 
-// GAME RULES ------>
-
-// --> add event listening to Game Rules button on start screen that links to a 
-//hidden div with game rules written out in <p> tag. 
-//make this a nav bar page
-
-
-
-
-// START BUTTON ----->
-
-// use addeventlistener to link to page with main game board after user inputs name which 
-//should print to the main game board under player 1. 
-
-// Step one: get draw buttons to pull from deck array of 52 cards.
-
-
-
 
 // GAMEBOARD ----->
 
@@ -221,11 +203,11 @@ function roundWinner(){
 
 
 function p1CardCount(){
-    p1Cards.innerHTML = `Player 1 Cards: ${play1Deck.length}`;
+    p1Cards.innerHTML = `Player 1 Arsenal: ${play1Deck.length}`;
 }
 
 function p2CardCount(){
-    p2Cards.innerHTML = `Player 2 Cards: ${play2Deck.length}`
+    p2Cards.innerHTML = `Player 2 Arsenal: ${play2Deck.length}`
 }
 
 // add round counter functions ---->
@@ -267,7 +249,7 @@ function calcWin(){
          clicks = 0;
          roundsPlayed++
          console.log(`rounds played = ${roundsPlayed}`);
-         rounds.innerHTML = `rounds played = ${roundsPlayed}`;
+         rounds.innerHTML = `Battles Fought = ${roundsPlayed}`;
          declareWinner();
          
       
