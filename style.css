@@ -1,9 +1,13 @@
 body{
-    background-color: seagreen;
+    background-color: rgb(31, 122, 70, .7);
     /* background-image: url(https://dm0qx8t0i9gc9.cloudfront.net/watermarks/video/2mhLcvO/videoblocks-floating-broadcast-shapes_r4gi-ot-z7__c0bbbd54218447d4eaf208876360cbb2__P360.mp4); */
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
+    font-family: monospace;
+}
+h1{
+    font-family: ;
 }
 /* video{
     object-fit: cover;
@@ -37,7 +41,7 @@ body{
 
     height: 150px;
     width: 94px;
-    background-color: aquamarine;
+    background-color: rgba(103, 223, 183, 0.75);
     text-align: center;
     font-size: 25px;
     text-justify: center;
@@ -50,7 +54,7 @@ body{
 
     height: 150px;
     width: 95px;
-    background-color: aquamarine;
+    background-color: rgba(103, 223, 183, 0.75);
     text-align: center;
     font-size: 25px;
     text-justify: center;
@@ -64,7 +68,7 @@ body{
 
     height: 80px;
     width: 325px;
-    background-color: aquamarine;
+    background-color: rgba(103, 223, 183, 0.75);
     text-align: center;
     font-size: 40px;
     text-justify: left;
@@ -86,7 +90,7 @@ body{
 
     height: 50px;
     width: 250px;
-    background-color: aquamarine;
+    background-color: rgba(103, 223, 183, 0.75);
     text-align: left;
     font-size: 25px;
     text-justify: center;
@@ -101,19 +105,19 @@ body{
 
     height: 50px;
     width: 250px;
-    background-color: aquamarine;
+    background-color: rgba(103, 223, 183, 0.75);
 
     text-align: left;
     font-size: 25px;
     text-justify: center;
-    border: solid 2ps black;
+    border: solid 2px black;
     border-radius: 8px;
     padding-top: 12px;
 
 }
 
 .winner{
-    background-color: aquamarine;
+    background-color: rgba(103, 223, 183, 0.75);
     height: 80px;
     width: 350px;
     border: solid 2px black;
@@ -140,7 +144,7 @@ body{
 } */
 
 .navBar{
-    background-color: aquamarine;
+    background-color: rgba(103, 223, 183, 0.75);
 
     border: solid 2px black;
     border-radius: 12px;
@@ -193,4 +197,19 @@ body{
 
 .nav{
     
+}
+
+img{
+    opacity: 0.7;
+    width: 780px;
+    height: 385px;
+    border: solid 1px black;
+    border-radius: 9px;
+    
+}
+
+.imageContainer{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
 }
