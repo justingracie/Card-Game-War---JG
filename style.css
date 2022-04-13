@@ -38,6 +38,7 @@ h1{
 /*  citation : https://blog.hubspot.com/website/video-background-css */
 .play2{
     float: right;
+    /* padding-left: 5px; */
 }
 
 .p1Flip{
@@ -87,6 +88,7 @@ h1{
 
 .p2Draw{
     float: right;
+    /* padding-left: 5px; */
 }
 
 .p1Cards{
@@ -100,6 +102,7 @@ h1{
     border: solid 2px black;
     border-radius: 8px;
     padding-top: 12px;
+
 
 
 }

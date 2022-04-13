@@ -56,6 +56,10 @@ const flipCount = document.querySelectorAll('#flip')
 let roundsPlayed = 0
 const rounds = document.querySelector('.rounds')
 
+const cardImage1 = document.querySelector('.card1');
+const cardImage2 = document.querySelector('.card2');
+
+
 // Build Decks ----->
 
 
@@ -79,8 +83,6 @@ console.log(deck);
 
 //Shuffle and dealing the deck ----->
 
-const cardImage1 = document.querySelector('.card1');
-const cardImage2 = document.querySelector('.card2');
 
 
 
@@ -263,7 +265,7 @@ function calcWin(){
 
 
 function declareWinner(){
-    if(roundsPlayed === 26){
+    if(roundsPlayed === 10){
         gameResults();
     }
 }
@@ -305,72 +307,107 @@ function playAgain(){
 
 
 
-// class Players {
-//     constructor(name, cards=[], wins=0){
-//         this.name = name
-//         this.cards = cards
-//         this.wins = wins
+//Tie Battle ----->
 
-//     }
-//     getName(){
-//         return this.name;
-//     }
-//     getCards(){
-//         return this.cards;
-//     }
-//     getWins(){
-//         return this.wins;
-//     }
+//round function unhides a war button, in tie conditional.
+
+//add event listener to War Battle Button that draws 4 cards from each players deck then compares 4th card, adding all 8 to back of winners deck.
+
+// const warButton = document.querySelector('.warBattle');
+
+
+// const battle = document.querySelector('.Battle');
+
+// warButton.addEventListener('click', flipBoth);
+
+// function flipBoth(){
+
+//     p1Flip.innerHTML = `${play1Deck[4].rank} ${play1Deck[4].suit}`
+//     p2Flip.innerHTML = `${play2Deck[4].rank} ${play2Deck[4].suit}`
+//     warBattle();
+
 // }
 
+// function warBattle(){
+//     if(play1Deck[4].score > play2Deck[4].score){
+//         winner.classList.remove('hide');
+//         winner.innerHTML = 'Player 1 Wins the Battle'
+//         let roundDraw1 = play1Deck.splice(0,5)
+//         let roundDraw2 = play2Deck.splice(0,5)
+
+//         drawPile.push(roundDraw1[0])
+//         drawPile.push(roundDraw1[1])
+//         drawPile.push(roundDraw1[2])
+//         drawPile.push(roundDraw1[3])
+//         drawPile.push(roundDraw1[4])
+        
+//         drawPile.push(roundDraw2[0])
+//         drawPile.push(roundDraw2[1])
+//         drawPile.push(roundDraw2[2])
+//         drawPile.push(roundDraw2[3])
+//         drawPile.push(roundDraw2[4])
+       
+//         console.log(drawPile)
+        
+//         let roundWin = drawPile.splice(0,10);
+
+//         play1Deck.push(roundWin[0])
+//         play1Deck.push(roundWin[1])
+//         play1Deck.push(roundWin[2])
+//         play1Deck.push(roundWin[3])
+//         play1Deck.push(roundWin[4])
+//         play1Deck.push(roundWin[5])
+//         play1Deck.push(roundWin[6])
+//         play1Deck.push(roundWin[7])
+//         play1Deck.push(roundWin[8])
+//         play1Deck.push(roundWin[9])
+
+//         console.log(play1Deck);
+
+//     }else if(play1Deck[4].score < play2Deck[4].score){
+//         winner.classList.remove('hide');
+//         winner.innerHTML = 'Player 2 Wins the Battle'
+
+//         let roundDraw1 = play1Deck.splice(0,5)
+//         let roundDraw2 = play2Deck.splice(0,5)
+
+//         drawPile.push(roundDraw1[0])
+//         drawPile.push(roundDraw1[1])
+//         drawPile.push(roundDraw1[2])
+//         drawPile.push(roundDraw1[3])
+//         drawPile.push(roundDraw1[4])
+        
+//         drawPile.push(roundDraw2[0])
+//         drawPile.push(roundDraw2[1])
+//         drawPile.push(roundDraw2[2])
+//         drawPile.push(roundDraw2[3])
+//         drawPile.push(roundDraw2[4])
+       
+//         console.log(drawPile)
+        
+//         let roundWin = drawPile.splice(0,10);
+
+//         play2Deck.push(roundWin[0])
+//         play2Deck.push(roundWin[1])
+//         play2Deck.push(roundWin[2])
+//         play2Deck.push(roundWin[3])
+//         play2Deck.push(roundWin[4])
+//         play2Deck.push(roundWin[5])
+//         play2Deck.push(roundWin[6])
+//         play2Deck.push(roundWin[7])
+//         play2Deck.push(roundWin[8])
+//         play2Deck.push(roundWin[9])
+
+//         console.log(play2Deck);
+
+//     }
+//     p1CardCount();
+//     p2CardCount();
+// }
+
+// ^^ hide flip buttons, display card index 4 in flip
 
 
-
-
-// This is where all the action happens, before starting player two will have a field to 
-//fill out their name and initiate gameplay.  after play two initiates cards will be dealt.
-
-
-// dIVS for  player one and two will have image of cards, flipped cards will display in
-//the battlezone.  will need to an array for deck of cards, then a loop to to iterate 
-//through the array and randomly give every other card to player one and player two. 
-
-//the cards will then be stored in the player constructor objects. 
-//flip card button will drawer from player deck (living in constructor object), and
-//display them in the battle zone. 
-
-//battle zone DIV will need a function to determine highest card.  will need coniditionals
-//that gives the player with the highest all the card within the battlezone, and add them 
-//to their deck/object. 
-//will also need a tie coniditional which requires players to flip again, drawing 3 facedown
-// cards from their decks, and one faceupcard to determine winner of 'war'.  
-
-//and another conditional which initiates another round of war upon a tie, and last conditional which 
-// determines a winner if one players runs out of cards during 'war'.  
-
-//after war will need to call a function to go back into regular gameplay if neither play runs out
-//of cards.  this is now a stretch goal 
-
-// END OF GAME ----->
-
-
-//write a function that determines if eithe player has run out of cards, and declare a winner. 
-
-
-
-
-// Play Again ----->
-
-//after the winner is determined I will want a hidden button to unhide with and option to play again
-//this should start us back at the original gameboard with a newly shuffled deck that is dealt out.
-//players names should remain the same. 
-
-
-// other Notes ----->
-
-// I think using class type objects and arrays will be my main methods used for storing player and card
-// deck information in this game.  I'll need to use loops and functions to access and manipulate this
-// data. 
 
 
 //REFERENCES: 
